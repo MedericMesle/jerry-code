@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   end
 
   def users_params
-    params.permit(:prenom, :nom_de_famille, :date_de_naissance, :cours_collectifs)
+    params.permit(:prenom, :nom_de_famille, :date_de_naissance, :cours_collectifs, :cours_particuliers)
   end
 end

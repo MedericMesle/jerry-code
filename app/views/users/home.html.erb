@@ -17,13 +17,13 @@
       <p><%= params[:"prenom"]%></p>
       <p><%= params[:"nom_de_famille"]%></p>
       <p><%= params[:"date_de_naissance"]%></p>
-    <% elsif @input.include?"cours_particuliers" %>
-    <%= "Cours Particuliers" %>
+    <% elsif @input.include?"cours_particuliers" %></h3>
+    <h3><%= "Cours Particuliers" %>
       <p><%= params[:"prenom"]%></p>
       <p><%= params[:"nom_de_famille"]%></p>
       <p><%= params[:"date_de_naissance"]%></p>
     <% else %>
-    <%= "Bonjour, veuillez remplir le formulaire" %>
+    <h3><%= "Bonjour, veuillez remplir le formulaire" %></h3>
     <% end %>
     </div>
   </div>
@@ -46,7 +46,9 @@
       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
       <label class="form-check-label" for="flexSwitchCheckDefault">Vous avez déjà des notions de programmation</label>
     </div>
-    <button class="btn btn-primary" type="submit" name="cours_collectifs">Cours collectifs</button>
-    <button class="btn btn-primary" type="submit" name="cours_particuliers">Cours particuliers</button>
+    <div class="btn-div">
+      <button class="btn btn-primary" type="submit" name="cours_collectifs">Cours collectifs</button>
+      <button class="btn btn-primary" type="submit" name="cours_particuliers">Cours particuliers</button>
+    </div>
   </form>
 </div>

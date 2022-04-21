@@ -55,3 +55,10 @@ body {
 .form-control{
   background-color: #efefef;
 }
+
+.btn-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 25px;
+}

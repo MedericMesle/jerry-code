@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   def home
-    @input = params
-    @prenom = params[:prenom]
-    @nom_de_famille = params[:nom_de_famille]
+    @input = users_params
+  end
+
+  def users_params
+    params.permit(:prenom)
   end
 end

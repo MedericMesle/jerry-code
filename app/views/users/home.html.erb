@@ -1,16 +1,26 @@
 <h3>Welcome to Jerry Code</h3>
 
 
-<p><%=  params[:prenom]%></p>
-<p><%= params[:nom_de_famille] %></p>
+
+<div class="container">
+  <form action="/contact" method="get">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Prenom</span>
+      <input type="text" name="prenom" class="form-control" aria-label="Prenom" >
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nom de famille</span>
+      <input type="text" name="nom_de_famille" class="form-control" aria-label="nom_de_famille" >
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Date de naissance</span>
+      <input type="text" name="date_de_naissance" class="form-control" aria-label="date_de_naissance" >
+    </div>
+    <input type="submit">
+  </form>
+</div>
 
 
-
-
-
-
-<form action="/contact" method="get">
-  <input type="text" name="prenom" placeholder="Prenom">
-  <input type="text" name="nom_de_famille" placeholder="Nom de famille">
-  <input type="submit">
-</form>
+<p><%= params[:"prenom"]%></p>
+<p><%= params[:"nom_de_famille"]%></p>
+<p><%= params[:"date_de_naissance"]%></p>

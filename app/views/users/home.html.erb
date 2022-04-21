@@ -1,8 +1,23 @@
 <h3>Welcome to Jerry Code</h3>
 
-
-
 <div class="container">
+  <div class="card">
+    <div class="card-body">
+    <% if @input.include?"cours_collectifs" %>
+    <%= "Cours Collectifs" %>
+      <p><%= params[:"prenom"]%></p>
+      <p><%= params[:"nom_de_famille"]%></p>
+      <p><%= params[:"date_de_naissance"]%></p>
+    <% else %>
+    <%= "Cours Particuliers" %>
+      <p><%= params[:"prenom"]%></p>
+      <p><%= params[:"nom_de_famille"]%></p>
+      <p><%= params[:"date_de_naissance"]%></p>
+    <% end %>
+    </div>
+  </div>
+
+
   <form action="/contact" method="get">
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default">Prenom</span>
@@ -16,11 +31,11 @@
       <span class="input-group-text" id="inputGroup-sizing-default">Date de naissance</span>
       <input type="text" name="date_de_naissance" class="form-control" aria-label="date_de_naissance" >
     </div>
-    <input type="submit">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">Vous avez déjà des notions de programmation</label>
+    </div>
+    <button class="btn btn-primary" type="submit" name="cours_collectifs">Cours collectifs</button>
+    <button class="btn btn-primary" type="submit">Cours particuliers</button>
   </form>
 </div>
-
-
-<p><%= params[:"prenom"]%></p>
-<p><%= params[:"nom_de_famille"]%></p>
-<p><%= params[:"date_de_naissance"]%></p>

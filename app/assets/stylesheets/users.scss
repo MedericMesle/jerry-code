@@ -1,3 +1,35 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+  font-family: roboto;
+  color: #444444;
+
+}
+.navbar {
+  justify-content: space-between;
+}
+
+.bread-crums{
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  img{
+    width: 140px;
+  }
+  a{
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 25px;
+    color: #444444;
+  }
+  a:hover{
+    color: #004996;
+  }
+}
+
+.card{
+  margin-top: 70px;
+  margin-bottom: 35px;
+}
